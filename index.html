@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Notes App</title>
+  <link rel="stylesheet" href="Style.css" />
+</head>
+<body>
+  <main class="app">
+    <header class="app__header">
+      <h1>Notes App</h1>
+      <p class="app__sub">Save, edit, and delete notes (stored in your browser).</p>
+    </header>
+
+    <section class="card">
+      <h2 class="card__title">Write a note</h2>
+
+      <label class="field">
+        <span>Note</span>
+        <textarea id="noteInput" rows="5" placeholder="Type your note..."></textarea>
+      </label>
+
+      <div class="actions">
+        <button id="saveBtn" class="btn btn--primary" type="button">Save</button>
+        <button id="clearBtn" class="btn" type="button">Clear</button>
+      </div>
+
+      <p id="status" class="status" role="status" aria-live="polite"></p>
+    </section>
+
+    <section class="card">
+      <div class="card__header">
+        <h2 class="card__title">Your notes</h2>
+        <div class="card__tools">
+          <button id="exportBtn" class="btn" type="button" title="Download notes as JSON">Export</button>
+          <label class="btn btn--ghost">
+            Import
+            <input id="importInput" type="file" accept="application/json" hidden />
+          </label>
+          <button id="clearAllBtn" class="btn btn--danger" type="button" title="Delete all notes">Clear all</button>
+        </div>
+      </div>
+
+      <div id="notesList" class="notes"></div>
+      <p id="emptyState" class="empty">No notes yet. Write one above and press <b>Save</b>.</p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
