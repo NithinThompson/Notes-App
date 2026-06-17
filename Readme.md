@@ -1,4 +1,5 @@
 # Notes App
+Version --1
 
 A simple notes application (HTML/CSS/JS) that stores notes in **localStorage**.
 
